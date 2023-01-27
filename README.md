@@ -54,6 +54,7 @@
 - **Use database migration files to maintain database schema.**
 - **Use data models with associations.**
 - **Use customize model methods**
+- **Use validation for models**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,7 +97,6 @@ To run the project, just create the database and the schema file should create t
 - [ ] **Processing data in models.**
 - [ ] **Views.**
 - [ ] **Forms.**
-- [ ] **Validations, Model specs.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
