@@ -55,6 +55,7 @@
 - **Use data models with associations.**
 - **Use customize model methods**
 - **Use validation for models**
+- **Use controllers to handle requests and render empty views**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
