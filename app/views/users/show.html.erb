@@ -1,1 +1,24 @@
-<h1>show single user</h1>
+<div class="wrapper flex w80 mAuto">
+  <div>
+    <%= image_tag(@user.photo, :class => 'photo border')%>
+  </div>
+  <div class="user_info w80 border flex">
+    <h2 class="w50"><%= @user.name%></h2>
+    <p class="w50 postNum">Number of posts: <%= @user.postsCounter%></p>
+  </div>
+</div>
+<div class="user_bio border w80 mAuto">
+  <p>Bio</p>
+  <br>
+  <p><%= @user.bio%></p>
+</div>
+<%@user.recent_posts.each do |item| %>
+  <div class="w80 border mAuto post flex">
+    <p class="mBottom10"><%= item.title%> </p>
+    <p><%= item.text%></p>
+    <p class="commentLike">Comments: <%=item.commentsCounter%>, Likes: <%= item.likesCounter%></p>
+  </div>
+<% end %>
+<%= link_to 'See all posts', user_posts_url(@user), class: 'button border mAuto'%>
+
+

@@ -1,1 +1,23 @@
-<h1>List of posts</h1>
+<div class="wrapper flex w80 mAuto">
+  <div>
+    <%= image_tag(@user.photo, :class => 'photo border')%>
+  </div>
+  <div class="user_info w80 border flex">
+    <h2 class="w50"><%= @user.name%></h2>
+    <p class="w50 postNum">Number of posts: <%= @user.postsCounter%></p>
+  </div>
+</div>
+<% @posts.each do |item|%>
+  <div class="w80 border mAuto post flex">
+    <%= link_to item.title, user_post_url(:user_id => @user.id, :id => item.id), class: 'mBottom10 click'%>
+    <p><%= item.text%></p>
+    <p class="commentLike">Comments: <%=item.commentsCounter%>, Likes: <%= item.likesCounter%></p>
+  </div>
+  <div class="w80 border mAuto comment">
+    <% item.recent_five_comments.each do |element|%>
+      <p><%= element.author.name%>: <%= element.text%></p>
+    <% end %>
+  </div>
+<% end %>
+
+
