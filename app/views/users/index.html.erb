@@ -1,6 +1,8 @@
 <% @users.each do |person| %>
-  <div class="wrapper flex">
-    <div class="photo border"></div>
+  <div class="wrapper flex w80 mAuto">
+    <div>
+      <%= image_tag(person.photo, :class => 'photo border')%>
+    </div>
     <div class="user_info border flex">
       <h2 class="w50"><%= person.name%></h2>
       <p class="w50 postNum">Number of posts: <%= person.postsCounter%></p>

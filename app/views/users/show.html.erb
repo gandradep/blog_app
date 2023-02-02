@@ -1,1 +1,12 @@
-<h1>show single user</h1>
+<div class="wrapper flex w80 mAuto">
+  <div class="">
+    <%= image_tag(@user.photo, :class => 'photo border')%>
+  </div>
+  <div class="user_info border flex">
+    <h2 class="w50"><%= @user.name%></h2>
+    <p class="w50 postNum">Number of posts: <%= @user.postsCounter%></p>
+  </div>
+</div>
+<div class="user_bio border w80 mAuto">
+  <p><%= @user.bio%></p>
+</div>

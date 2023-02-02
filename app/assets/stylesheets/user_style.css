@@ -6,11 +6,19 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+.w80 {
+  width: 80%;
+}
+
+.mAuto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .wrapper {
-  width: 100%;
-  column-gap: 100px;
-  justify-content: center;
-  margin: 30px 0;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .flex {
@@ -24,8 +32,12 @@
 
 .user_info {
   height: 80px;
-  width: 60%;
+  width: 70%;
   padding: 10px 25px;
+}
+
+.user_bio {
+  padding: 1rem;
 }
 
 .w50 {
