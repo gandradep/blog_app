@@ -6,8 +6,19 @@
   font-family: 'Ubuntu', sans-serif;
 }
 
+a:link,
+a:active,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
 .w80 {
   width: 80%;
+}
+
+.w100 {
+  width: 100%;
 }
 
 .mAuto {
@@ -30,14 +41,17 @@
   width: 100px;
 }
 
+.anchor_user {
+  width: 75%;
+}
 .user_info {
   height: 80px;
-  width: 70%;
   padding: 10px 25px;
 }
 
 .user_bio {
   padding: 1rem;
+  margin-bottom: 30px;
 }
 
 .w50 {
@@ -47,6 +61,25 @@
 .postNum {
   align-self: flex-end;
   font-size: 1.2rem;
+}
+
+.post {
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.commentLike {
+  font-size: 0.8rem;
+  align-self: flex-end;
+}
+
+.button {
+  display: block;
+  padding: 0.8rem;
+  width: fit-content;
+  box-shadow: 3px 3px;
 }
 
 .border {

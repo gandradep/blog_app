@@ -3,9 +3,11 @@
     <div>
       <%= image_tag(person.photo, :class => 'photo border')%>
     </div>
-    <div class="user_info border flex">
+    <%= link_to user_path(:id => person.id), class: 'anchor_user' do%>
+    <div class="user_info w100 border flex">
       <h2 class="w50"><%= person.name%></h2>
       <p class="w50 postNum">Number of posts: <%= person.postsCounter%></p>
     </div>
+    <% end %>
   </div>
 <% end %>
