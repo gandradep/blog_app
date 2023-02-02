@@ -36,6 +36,11 @@ a:visited {
   display: flex;
   align-items: center;
 }
+
+.mBottom10 {
+  margin-bottom: 20px;
+}
+
 .photo {
   height: 100px;
   width: 100px;
@@ -51,7 +56,7 @@ a:visited {
 
 .user_bio {
   padding: 1rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .w50 {
@@ -66,7 +71,7 @@ a:visited {
 .post {
   flex-direction: column;
   padding: 1rem;
-  margin-bottom: 20px;
+  margin-top: 10px;
   align-items: flex-start;
 }
 
@@ -76,12 +81,22 @@ a:visited {
 }
 
 .button {
+  margin-top: 20px;
   display: block;
   padding: 0.8rem;
   width: fit-content;
   box-shadow: 3px 3px;
 }
 
+.comment {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding: 1rem;
+}
+
+.click {
+  font-weight: bold;
+}
 .border {
   border: 2px black solid;
 }

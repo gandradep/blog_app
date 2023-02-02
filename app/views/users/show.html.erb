@@ -14,7 +14,7 @@
 </div>
 <%@user.recent_posts.each do |item| %>
   <div class="w80 border mAuto post flex">
-    <p><%= item.title%> </p>
+    <p class="mBottom10"><%= item.title%> </p>
     <p><%= item.text%></p>
     <p class="commentLike">Comments: <%=item.commentsCounter%>, Likes: <%= item.likesCounter%></p>
   </div>
