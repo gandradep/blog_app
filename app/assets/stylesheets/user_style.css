@@ -97,6 +97,11 @@ a:visited {
 .click {
   font-weight: bold;
 }
+
+.post_header {
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
 .border {
   border: 2px black solid;
 }

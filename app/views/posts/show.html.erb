@@ -1,1 +1,14 @@
-<h1>show single post</h1>
+<div class="w80 border mAuto post">
+  <div class= "flex post_header">
+    <p><%= @post.title%> by <%= @user.name%></p>
+    <p class="commentLike">Comments: <%=@post.commentsCounter%>, Likes: <%= @post.likesCounter%></p>
+  </div>
+
+    <p><%= @post.text%></p>
+
+  </div>
+  <div class="w80 border mAuto comment">
+    <% @post.comments.each do |item|%>
+      <p><%= item.author.name%>: <%= item.text%></p>
+    <%end%>
+  </div>
