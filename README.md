@@ -57,6 +57,7 @@
 - **Use validation for models**
 - **Use controllers to handle requests and render empty views**
 - **Use preprocessed HTML file with embedded Ruby code.**
+- **Use Rails forms to add posts, comments and likes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
