@@ -19,6 +19,5 @@ class CommentsController < ApplicationController
       render :new, status: :unprocessable_entity
       p 'not save'
     end
-
   end
 end
