@@ -1,0 +1,9 @@
+<div class='w80 mAuto'>
+  <h2>Add a comment to the post</h2>
+  <%= render 'shared/submit_comment_message'%>
+  <%= form_with model: @comment, url: user_post_comments_path, scope: :comment, class: 'w100' do |f|%>
+
+    <%= f.text_area :text, class: 'w100 commentArea' %>
+    <%= f.submit "Add Comment"%>
+  <%end%>
+</div>

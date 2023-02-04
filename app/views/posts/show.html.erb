@@ -17,14 +17,7 @@
     <p><%= item.author.name%>: <%= item.text%></p>
   <%end%>
 </div>
-
-
-<div class='w80 mAuto'>
-  <h3>Add a comment to the post</h2>
-  <%= form_with model: @comment, url: user_post_comments_path(@user, @post), scope: :comment, class: 'w100' do |f|%>
-
-    <%= f.text_area :text, class: 'w100 commentArea' %>
-    <%= f.submit "Add Comment" %>
-  <%end%>
+<div class="w80 mAuto">
+<%= link_to 'Create new comment', new_user_post_comment_path(@user, @post), class: 'button border'%>
 </div>
 
