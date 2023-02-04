@@ -1,13 +1,17 @@
+<div class="flex formWrapper">
 <h1>New Post</h1>
-<%= form_with model: @post, url: user_posts_path do |f|%>
-<div>
+<%= form_with model: @post, url: user_posts_path, class: 'form flex'   do |f|%>
+<div class="w80">
   <%= f.label :title %> <br>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: 'w100' %>
   </div>
-  <div>
+  <div class="w80">
   <%= f.label :text %> <br>
-  <%= f.text_area :text, class: 'textArea' %>
+  <%= f.text_area :text, class: 'textArea w100' %>
   </div>
   <%= f.submit "Add Post" %>
-
 <%end%>
+<% if flash[:error] %>
+    <div><%= flash[:error] %></div>
+<% end %>
+</div>

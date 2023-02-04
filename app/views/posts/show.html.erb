@@ -3,12 +3,21 @@
     <p><%= @post.title%> by <%= @user.name%></p>
     <p class="commentLike">Comments: <%=@post.commentsCounter%>, Likes: <%= @post.likesCounter%></p>
   </div>
+  <p><%= @post.text%></p>
+</div>
+<div class="w80 border mAuto comment">
+  <% @post.comments.each do |item|%>
+    <p><%= item.author.name%>: <%= item.text%></p>
+  <%end%>
+</div>
+<%= render 'shared/submit_comment_message'%>
 
-    <p><%= @post.text%></p>
+<div class='w80 mAuto'>
+  <h3>Add a comment to the post</h2>
+  <%= form_with model: @comment, url: user_post_comments_path(@user, @post), scope: :comment, class: 'w100' do |f|%>
 
-  </div>
-  <div class="w80 border mAuto comment">
-    <% @post.comments.each do |item|%>
-      <p><%= item.author.name%>: <%= item.text%></p>
-    <%end%>
-  </div>
+    <%= f.text_area :text, class: 'w100 commentArea' %>
+    <%= f.submit "Add Comment" %>
+  <%end%>
+</div>
+

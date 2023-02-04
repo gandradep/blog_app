@@ -7,6 +7,9 @@
     <p class="w50 postNum">Number of posts: <%= @user.postsCounter%></p>
   </div>
 </div>
+<% if flash[:success] %>
+    <div><%= flash[:success] %></div>
+<% end %>
 <% @posts.each do |item|%>
   <div class="w80 border mAuto post flex">
     <%= link_to item.title, user_post_url(:user_id => @user.id, :id => item.id), class: 'mBottom10 click'%>

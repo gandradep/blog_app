@@ -110,7 +110,24 @@ a:visited {
   border: 2px black solid;
 }
 
+.formWrapper {
+  flex-direction: column;
+  row-gap: 30px;
+  padding: 1rem;
+}
+
+.form {
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: flex-start;
+  width: 50%;
+}
 .textArea {
+  resize: none;
+  height: 200px;
+}
+
+.commentArea {
   resize: none;
 
 }

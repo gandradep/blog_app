@@ -19,10 +19,9 @@ class PostsController < ApplicationController
       flash[:success] = 'Post saved'
       redirect_to user_posts_url
     else
-      flash[:error] = 'Post not created'
-      render :new
+      flash.now[:error] = 'Post not created!!'
+      render :new, status: :unprocessable_entity
     end
-
   end
 
   def show
