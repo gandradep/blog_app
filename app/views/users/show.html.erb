@@ -19,6 +19,11 @@
     <p class="commentLike">Comments: <%=item.commentsCounter%>, Likes: <%= item.likesCounter%></p>
   </div>
 <% end %>
-<%= link_to 'See all posts', user_posts_url(@user), class: 'button border mAuto'%>
+<div class="flex w80 mAuto buttonWrapper">
+  <%= link_to 'See all posts', user_posts_url(@user), class: 'button border'%>
+
+  <%= link_to 'Create new post', new_user_post_path(@user), class: 'button border'%>
+</div>
+
 
 

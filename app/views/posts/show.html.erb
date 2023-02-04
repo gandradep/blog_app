@@ -3,12 +3,21 @@
     <p><%= @post.title%> by <%= @user.name%></p>
     <p class="commentLike">Comments: <%=@post.commentsCounter%>, Likes: <%= @post.likesCounter%></p>
   </div>
-
-    <p><%= @post.text%></p>
-
+  <p><%= @post.text%></p>
+</div>
+<div class="w80 mAuto">
+<%= form_with model: @like, url: user_post_likes_path(@user, @post), scope: :like do |f|%>
+    <%= f.hidden_field :post_id, value: @post.id %>
+    <%= f.submit "Like this post" %>
+  <%end%>
   </div>
-  <div class="w80 border mAuto comment">
-    <% @post.comments.each do |item|%>
-      <p><%= item.author.name%>: <%= item.text%></p>
-    <%end%>
-  </div>
+<%= render 'shared/submit_comment_message'%>
+<div class="w80 border mAuto comment">
+  <% @post.comments.each do |item|%>
+    <p><%= item.author.name%>: <%= item.text%></p>
+  <%end%>
+</div>
+<div class="w80 mAuto">
+<%= link_to 'Create new comment', new_user_post_comment_path(@user, @post), class: 'button border'%>
+</div>
+
