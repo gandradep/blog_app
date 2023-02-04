@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,6 +50,7 @@ a:visited {
 .anchor_user {
   width: 75%;
 }
+
 .user_info {
   height: 80px;
   padding: 10px 25px;
@@ -106,6 +108,7 @@ a:visited {
   justify-content: space-between;
   margin-bottom: 30px;
 }
+
 .border {
   border: 2px black solid;
 }
@@ -122,6 +125,7 @@ a:visited {
   align-items: flex-start;
   width: 50%;
 }
+
 .textArea {
   resize: none;
   height: 200px;
@@ -129,5 +133,4 @@ a:visited {
 
 .commentArea {
   resize: none;
-
 }
