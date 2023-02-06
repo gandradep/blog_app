@@ -17,10 +17,8 @@
     <p class="commentLike">Comments: <%=item.commentsCounter%>, Likes: <%= item.likesCounter%></p>
   </div>
   <div class="w80 border mAuto comment">
-    <% item.recent_five_comments.each do |element|%>
+    <% item.recent_five_comments.includes(:author).each do |element|%>
       <p><%= element.author.name%>: <%= element.text%></p>
     <% end %>
   </div>
 <% end %>
-
-
