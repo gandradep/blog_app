@@ -17,7 +17,7 @@ RSpec.describe 'User index', type: :feature do
     visit root_path
   end
 
-  it 'shows the username' do
+  it 'shows the number of posts' do
     expect(page).to have_content('Number of posts: 0')
     expect(page).to have_content('Number of posts: 2')
   end
