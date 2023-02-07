@@ -91,6 +91,13 @@ To run the project, just create the database and the schema file should create t
 - Twitter: [@leribagandrade](https://twitter.com/leribagandrade)
 - LinkedIn: [Gabriel-Andrade](https://www.linkedin.com/in/gabriel-andrade-silla-turca/)
 
+👤 **Amare Kassa**
+
+- GitHub: [@githubhandle](https://github.com/amare1990)
+- Twitter: [@twitterhandle](https://twitter.com/amaremek)
+- LinkedIn: [@linkedInhandle](https://www.linkedin.com/in/amaremek/)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
