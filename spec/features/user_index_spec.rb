@@ -18,11 +18,20 @@ RSpec.describe 'User index', type: :feature do
   end
 
   it 'shows the username' do
+    expect(page).to have_content('Number of posts: 0')
+    expect(page).to have_content('Number of posts: 2')
+  end
+
+  it 'shows profile pic' do
+    expect(page).to have_css("img[src*='https://unsplash.com/photos/']")
+  end
+
+  it 'shows the username' do
     expect(page).to have_content('Lilly')
     expect(page).to have_content('Pepe')
   end
 
-  it "When I click on a user, should redirected to that user's show page." do
+  it 'Redirecting to user/:id' do
     click_on @user1.name
     expect(page).to have_current_path user_path(@user1.id)
   end
