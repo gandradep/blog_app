@@ -48,8 +48,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **Use Ruby Gems as a software packages system.**
 - **Use database migration files to maintain database schema.**
 - **Use data models with associations.**
