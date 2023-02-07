@@ -10,4 +10,10 @@ RSpec.describe 'User index', type: :feature do
     )
     visit user_posts_path(@user1)
   end
+
+  it 'shows the username' do
+    expect(page).to have_content('Lilly')
+    expect(page).not_to have_content('Jessica')
+  end
+
 end
