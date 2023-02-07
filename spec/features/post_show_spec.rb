@@ -58,4 +58,9 @@ RSpec.describe 'User index', type: :feature do
     expect(page).to have_content @comment1.author.name
     expect(page).to have_content @comment2.author.name
   end
+
+  it 'See the comment left' do
+    expect(page).to have_content @comment1.text
+    expect(page).to have_content @comment2.text
+  end
 end
