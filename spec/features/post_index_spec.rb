@@ -16,4 +16,8 @@ RSpec.describe 'User index', type: :feature do
     expect(page).not_to have_content('Jessica')
   end
 
+  it 'shows profile pic' do
+    expect(page).to have_css("img[src='https://unsplash.com/photos/k-1Q0eBFo_0']")
+  end
+
 end
