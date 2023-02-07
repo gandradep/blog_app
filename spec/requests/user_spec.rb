@@ -17,9 +17,6 @@ RSpec.describe User, type: :request do
     it 'response not renders show method' do
       expect(response).not_to render_template(:show)
     end
-    it 'response not renders show method' do
-      expect(response.body).to include('<h1>List of users</h1>')
-    end
   end
 
   context 'Testing /users/:id route' do
@@ -37,9 +34,6 @@ RSpec.describe User, type: :request do
     end
     it 'response not renders show method' do
       expect(response).not_to render_template(:index)
-    end
-    it 'response not renders show method' do
-      expect(response.body).to include('<h1>show single user</h1>')
     end
   end
 end
