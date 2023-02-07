@@ -16,4 +16,8 @@ RSpec.describe 'User index', type: :feature do
     expect(page).not_to have_content('Jessica')
   end
 
+  it 'shows user bio' do
+    expect(page).to have_content @user1.bio
+  end
+
 end
