@@ -48,8 +48,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **Use Ruby Gems as a software packages system.**
 - **Use database migration files to maintain database schema.**
 - **Use data models with associations.**
@@ -90,6 +88,13 @@ To run the project, just create the database and the schema file should create t
 - GitHub: [@gandradep](https://github.com/gandradep)
 - Twitter: [@leribagandrade](https://twitter.com/leribagandrade)
 - LinkedIn: [Gabriel-Andrade](https://www.linkedin.com/in/gabriel-andrade-silla-turca/)
+
+👤 **Amare Kassa**
+
+- GitHub: [@githubhandle](https://github.com/amare1990)
+- Twitter: [@twitterhandle](https://twitter.com/amaremek)
+- LinkedIn: [@linkedInhandle](https://www.linkedin.com/in/amaremek/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

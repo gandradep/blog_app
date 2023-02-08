@@ -14,7 +14,7 @@
 </div>
 <%@user.recent_posts.each do |item| %>
   <div class="w80 border mAuto post flex">
-    <p class="mBottom10"><%= item.title%> </p>
+    <%= link_to item.title, user_post_url(:user_id => @user.id, :id => item.id), class: 'mBottom10 click'%>
     <p><%= item.text%></p>
     <p class="commentLike">Comments: <%=item.commentsCounter%>, Likes: <%= item.likesCounter%></p>
   </div>
