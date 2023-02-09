@@ -1,3 +1,7 @@
+<div class="flex w80 mAuto buttonWrapper">
+  <%= button_to 'Sign out', destroy_user_session_path, method: :delete, data: { turbo: false },
+ class: 'button border'%>
+</div>
 <% @users.each do |person| %>
   <div class="wrapper flex w80 mAuto">
     <div>
