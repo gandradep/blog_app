@@ -48,9 +48,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_08_222129) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-    t.string "photo"
+    t.string "photo", default: "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
     t.text "bio"
-    t.integer "postsCounter"
+    t.integer "postsCounter", default: 0
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
