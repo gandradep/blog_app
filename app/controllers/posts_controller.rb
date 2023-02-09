@@ -14,7 +14,6 @@ class PostsController < ApplicationController
     post.author = current_user
     post.likesCounter = 0
     post.commentsCounter = 0
-    p post
     if post.save
       flash[:success] = 'Post saved'
       redirect_to user_posts_url
