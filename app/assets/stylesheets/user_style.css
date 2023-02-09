@@ -14,6 +14,10 @@ a:visited {
   text-decoration: none;
 }
 
+.bgcNone {
+  background-color: white;
+}
+
 .w80 {
   width: 80%;
 }
@@ -133,4 +137,20 @@ a:visited {
 
 .commentArea {
   resize: none;
+}
+
+.new_user {
+  width: 70%;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.shadow {
+  box-shadow: 3px 3px;
+}
+
+.p10px {
+  padding: 5px;
 }
