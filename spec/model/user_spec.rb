@@ -25,7 +25,6 @@ RSpec.describe User, type: :model do
   end
 
   it 'Recent posts shows 3' do
-    p subject.id
     Post.create(author_id: subject.id, title: 'Hello', text: 'This is my first post', commentsCounter: 0, likesCounter: 0)
     Post.create(author_id: subject.id, title: 'Hello2', text: 'This is my first post2', commentsCounter: 0, likesCounter: 0)
     Post.create(author_id: subject.id, title: 'Hello3', text: 'This is my first post3', commentsCounter: 0, likesCounter: 0)

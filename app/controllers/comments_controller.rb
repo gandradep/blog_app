@@ -12,12 +12,10 @@ class CommentsController < ApplicationController
     @comment.post = post
     if @comment.save
       flash[:success] = 'Comment created succesfully!'
-      p 'saved'
       redirect_to user_post_url(user, post)
     else
       flash[:error] = "The comment couldn't be created!"
       render :new, status: :unprocessable_entity
-      p 'not save'
     end
   end
 end
