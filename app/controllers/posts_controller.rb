@@ -27,4 +27,12 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
   end
+
+  def destroy
+    post = Post.find(params[:id])
+    user = User.find(params[:user_id])
+    post.destroy
+    user.update(postsCounter: user.posts.count)
+    redirect_to user_posts_path(user.id)
+  end
 end
