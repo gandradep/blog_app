@@ -57,6 +57,7 @@
 - **Use preprocessed HTML file with embedded Ruby code.**
 - **Use Rails forms to add posts, comments and likes**
 - **Use devise with authentication**
+- **Use cancancan for user authorization**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
