@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   layout 'standard'
+  load_and_authorize_resource
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
@@ -26,5 +27,13 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    user = User.find(params[:user_id])
+    post.destroy
+    user.update(postsCounter: user.posts.count)
+    redirect_to user_posts_path(user.id)
   end
 end

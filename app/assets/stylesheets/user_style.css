@@ -42,6 +42,11 @@ a:visited {
   align-items: center;
 }
 
+.spaceBetween {
+  justify-content: space-between;
+  padding: 5px;
+}
+
 .mBottom10 {
   margin-bottom: 20px;
 }

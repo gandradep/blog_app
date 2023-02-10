@@ -3,7 +3,11 @@
     <p><%= @post.title%> by <%= @user.name%></p>
     <p class="commentLike">Comments: <%=@post.commentsCounter%>, Likes: <%= @post.likesCounter%></p>
   </div>
-  <p><%= @post.text%></p>
+  <p class="mBottom10"><%= @post.text%></p>
+  <% if can? :destroy, @post %>
+    <%= button_to 'Delete Post', user_post_path(@user, @post), method: :delete,
+    data: { turbo: false }, class: 'bgcNone p10px' %>
+  <% end %>
 </div>
 <div class="w80 mAuto">
 <%= form_with model: @like, url: user_post_likes_path(@user, @post), scope: :like do |f|%>
@@ -14,7 +18,13 @@
 <%= render 'shared/submit_comment_message'%>
 <div class="w80 border mAuto comment">
   <% @post.comments.each do |item|%>
+    <div class="flex spaceBetween">
     <p><%= item.author.name%>: <%= item.text%></p>
+    <% if can? :destroy, item %>
+        <%= button_to "delete", user_post_comment_path(item.author, @post, item.id),
+          method: :delete, data: { turbo: false }, class: 'bgcNone p10px'%>
+    <%end%>
+    </div>
   <%end%>
 </div>
 <div class="w80 mAuto">
