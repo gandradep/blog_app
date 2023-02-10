@@ -5,7 +5,6 @@ class Api::CommentsController < Api::ApplicationController
   end
 
   def create
-    p params
     comment = Comment.new(author_id: params[:user_id], post_id: params[:post_id], text: params[:text])
 
     if comment.save
