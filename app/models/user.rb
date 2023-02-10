@@ -16,4 +16,8 @@ class User < ApplicationRecord
   def admin?
     role == 'admin'
   end
+
+  def as_json(options={})
+    super(only: %i[id name bio postsCounter email role ])
+  end
 end
