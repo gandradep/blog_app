@@ -77,3 +77,4 @@ end
 gem 'cancancan'
 gem 'devise'
 gem 'letter_opener'
+gem 'rswag'
