@@ -58,6 +58,7 @@
 - **Use Rails forms to add posts, comments and likes**
 - **Use devise with authentication**
 - **Use cancancan for user authorization**
+- **Create API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
