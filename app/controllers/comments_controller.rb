@@ -18,4 +18,12 @@ class CommentsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    post = Post.find(params[:post_id])
+    comment.destroy
+    post.update(commentsCounter: post.comments.count)
+    redirect_to user_post_path(params[:user_id], params[:post_id])
+  end
 end
